@@ -1,0 +1,41 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  padding: 0;
+  height: 60px;
+  display: flex;
+  font-family: 'Poppins';
+}
+
+.navbarText {
+  color: #4361EE;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0em;
+  position: relative;
+  left: 24px;
+  bottom: 16px;
+}
+
+.navbarMenu {
+  list-style: none;
+  font-size: 22px;
+  position: relative;
+  top: 30px;
+  left: 40px;
+}
+
+.navbarMenu a {
+  text-decoration: none;
+  color: #4361EE;
+  padding: 10px;
+}
+
+.navbarMenu a:hover{
+  color: blue;
+}
