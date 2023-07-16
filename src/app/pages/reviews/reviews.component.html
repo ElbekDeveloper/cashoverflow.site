@@ -1,9 +1,28 @@
 <div class="container">
-    <img src="../../../assets/SignInBG.4484b7e6.svg" alt="" />
   <div class="header">
-    <div class="header-search">
-        <button type="button" class="add-students" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Add
+    <button type="button" class="add-reviews" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Add
       Reviews</button>
+  </div>
+</div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Add new reviews</h1>
+      </div>
+      <div class="modal-body">
+        <div class="input-container">
+          <input type="text" placeholder="Title" id="title" formControlName="title" />
+        </div>
+        <div class="input-container">
+          <input id="description" formControlName="description" placeholder="Description">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+      </div>
     </div>
   </div>
 </div>
