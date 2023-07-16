@@ -77,11 +77,31 @@
 .input-container input[type="hidden"] {
   display: none;
 }
+/**/
+.modal-dialog {
+  align-items: center;
+  top: 90px;
+  font-family: "Poppins", "sans-serif"
+}
 
+.modal-content {
+  width: 450px;
+  height: 480px;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+/**/
 .review {
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
-  padding: 3rem;
+  padding: 2rem;
   padding-bottom: 1.5rem;
   z-index: 1;
   background: #fff;
