@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #ffb27d;
+    --light-color: #f2f3f6;
+    --dark-color: #aaaaaa;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    position: static;
+    overflow-y: hidden;
+  }
+  
+  .container img {
+    position: absolute;
+    top: 200px;
+    left: 260px;
+    right: 0;
+    bottom: 0;
+    width: 62%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .header {
+    display: flex;
+    padding-top: 25px;
+    justify-content: flex-end;
+    font-family: "Poppins", "sans-serif";
+    margin-bottom: -10px;
+    z-index: 1;
+  }
+  
+  .header-search {
+    display: flex;
+    color: #444444;
+    margin-left: 25px;
+  }
+  
+  .add-students {
+    color: white;
+    background-color: #4361ee;
+    border-radius: 20px;
+    font-size: 14px;
+    height: 30px;
+    width: 120px;
+    border-color: #4361ee;
+    margin-right: 25px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    border: none;
+  }
+  
+  .add-students:hover {
+    background-color: white;
+    color: #4361ee;
+    border: 1px solid #4361ee;
+  }
+  
