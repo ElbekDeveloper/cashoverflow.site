@@ -7,7 +7,6 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SalariesComponent } from './pages/salaries/salaries.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
-
 @NgModule({
   declarations: [
     AppComponent,
