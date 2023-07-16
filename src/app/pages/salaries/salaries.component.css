@@ -1,0 +1,153 @@
+:root{
+    --primary-color: #4361ee;
+    --secondary-color: #ffb27d;
+    --light-color: #f2f3f6;
+    --dark-color: #aaaaaa;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: static;
+    overflow-y: hidden;
+  }
+  
+  .container img {
+    position: absolute;
+    top: 200px;
+    left: 260px;
+    right: 0;
+    bottom: 0;
+    width: 62%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.header {
+    display: flex;
+    padding-top: 25px;
+    justify-content: flex-end;
+    font-family: "Poppins", "sans-serif";
+    margin-bottom: -10px;
+    z-index: 1;
+}
+
+.header-search {
+    display: flex;
+    color: #444444;
+    margin-left: 25px;
+}
+
+.add-students {
+    color: white;
+    background-color: #4361ee;
+    border-radius: 20px;
+    font-size: 14px;
+    height: 30px;
+    width: 120px;
+    border-color: #4361ee;
+    margin-right: 25px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.add-students:hover {
+    background-color: white;
+    color: #4361ee;
+    border: 1px solid #4361ee;
+}
+
+
+
+
+/* .modal-dialog {
+    z-index: 1;
+    top: 20px;
+    left: 100px;
+}
+
+.modal-content {
+    width: 480px;
+    height: 260px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+    margin-left: 120px;
+}
+
+.modal-header button {
+    background-color: white;
+    border: none;
+    font-weight: 500;
+    margin-left: 100px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
+    justify-content: center;
+    flex-basis: 75%;
+}
+
+.user-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-info .user-input {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin: 10px;
+}
+
+.user-buttons {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+    transform: translate(175px, 10px);
+}
+
+.update-btn,
+.cancel-btn {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.update-btn {
+    background-color: yellow;
+    color: white;
+    margin-right: 10px;
+    width: 125px;
+}
+
+.cancel-btn {
+    background-color: red;
+    color: white;
+    width: 125px;
+}
+
+.update-btn:hover {
+    background-color: white;
+    color: rgb(245, 245, 60);
+    border: 1px solid yellow;
+}
+
+.cancel-btn:hover {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+} */
+
+
+
