@@ -13,32 +13,20 @@
               <img src="../../../assets/SignInHat.c0636635.svg" alt="" />
             </div>
             <h5>Leave Review</h5>
-            <form class="form">
               <div class="input-container">
-              <input formControlName="start" required placeholder="stars"/>
+              <input type="number" [(ngModel)]="stars"  required placeholder="stars"/>
               </div>
               <div class="input-container">
-                <input  formControlName="Company" required placeholder="Company"/>
+                <select  required [(ngModel)]="companyId" >
+                  <option value="" disabled selected >Select Location</option>
+                  <option *ngFor="let company of companies" [value]="company.id">{{ company.name }}</option>
+                </select>
               </div>
               <div class="thoughts-input">
-                <input  formControlName="Thoughts" required placeholder="Thoughts"/>
+                <textarea [(ngModel)]="thoughts" id="description" placeholder="Thoughts" required></textarea>
               </div>
-              <button  class="btn1" type="submit">Send</button>
-            </form>
+              <button  class="btn1" type="submit" (click)="createReview()">Send</button>
           </div>
         </div>
       </div>
     </div>
-
-
-<!-- <h5>Leave Review</h5>
-        <form class="form">
-          <div class="input-container">
-          <input formControlName="start" required placeholder="stars"/>
-          </div>
-          <div class="input-container">
-            <input  formControlName="Company" required placeholder="Company"/>
-          </div>
-          <div class="thoughts-input">
-            <input  formControlName="Thoughts" required placeholder="Thoughts"/>
-          </div> -->

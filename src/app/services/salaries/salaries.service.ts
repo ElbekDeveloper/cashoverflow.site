@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class SalariesService {
 
-  private baseUrl = 'https://cashoverflow-api.azurewebsites.net/api/Salaries';
+  private baseUrl = 'https://cashoverflow-api.azurewebsites.net/api/Salaries/';
 
   constructor(private http: HttpClient) { }
 

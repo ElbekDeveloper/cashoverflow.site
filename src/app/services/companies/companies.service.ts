@@ -20,7 +20,7 @@ export class CompaniesService {
     return this.http.get<any>(this.baseUrl);
   }
 
-  updateCompany(updatedCompany: any): Observable<any> {
+  public updateCompany(updatedCompany: any): Observable<any> {
     return this.http.put(this.baseUrl, updatedCompany);
   }
 
