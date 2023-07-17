@@ -31,14 +31,16 @@
 }
 
 .input-container input[type="text"],
-.input-container input[type="hidden"] {
+.input-container input[type="number"]  {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 0.5px solid rgba(67, 97, 238, 0.35);
   border-radius: 20px;
   width: 100%;
   box-sizing: border-box;
+  outline: rgba(67, 97, 238, 1);
   font-size: 14px;
-  height: 40px;
+  height: 37px;
+  font-family: "Poppins", "sans-serif";
 }
 
 .thoughts-input {
@@ -46,38 +48,25 @@
   margin-top: 2px;
 }
 
-.thoughts-input input[type="text"],
-.thoughts-input input[type="hidden"] {
+.thoughts-input textarea{
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
   font-size: 14px;
   height: 100px;
-}
-
-.thoughts-input input {
-  width: 100%;
-  height: 80px;
-  margin: 0.6rem 0.6rem 0.6rem 0;
-  padding: 0.4rem 1.2rem;
-  border: 0.5px solid rgba(67, 97, 238, 0.35);
-  border-radius: 18px;
+  max-height: 100px;
+  resize: none;
   outline: rgba(67, 97, 238, 1);
+  border: 0.5px solid rgba(67, 97, 238, 0.35);
+  border-radius: 20px;
   color: rgba(85, 85, 85, 1);
   font-family: "Poppins", "sans-serif";
-  transition: all 0.4s ease;
-  font-size: 13px;
 }
-.thoughts-input input:hover {
+
+.thoughts-input textarea:hover {
   border: 0.5px solid rgba(67, 97, 238, 1);
 }
 
-.input-container input[type="hidden"] {
-  display: none;
-}
-/**/
 .modal-dialog {
   align-items: center;
   top: 90px;
@@ -101,8 +90,10 @@
 
 .btn-close{
   display: flex;
-  margin-left: -5px;
+  position: relative;
+  left: 350px;
 }
+
 
 .review {
   border-radius: 20px;
@@ -112,13 +103,6 @@
   z-index: 1;
   background: #fff;
   transition: all 0.2s ease-in-out;
-  p{
-    span{
-      color: #4361ee;
-      cursor: pointer;
-    }
-    font-size: 14px;
-  }
 }
 .form-img {
   display: flex;
@@ -144,10 +128,12 @@
 .form div {
   position: relative;
 }
-.input-container input {
+
+.input-container select {
   width: 100%;
+  height: 34px;
   margin: 0.6rem 0.6rem 0.6rem 0;
-  padding: 0.4rem 1.2rem;
+  padding: 0px 0.3rem;
   border: 0.5px solid rgba(67, 97, 238, 0.35);
   border-radius: 50px;
   outline: rgba(67, 97, 238, 1);
@@ -156,9 +142,15 @@
   transition: all 0.4s ease;
   font-size: 13px;
 }
+
+.input-container select:hover {
+  border: 0.5px solid rgba(67, 97, 238, 1);
+}
+
 .input-container input:hover {
   border: 0.5px solid rgba(67, 97, 238, 1);
 }
+
 .btn1 {
   width: 100%;
   background: #4361ee;
@@ -173,11 +165,13 @@
   border: 1px solid rgba(67, 97, 238, 1);
   font-size: 13px;
 }
+
 .btn1:hover {
   box-sizing: border-box;
   background: #fff;
   color: #4361ee;
 }
+
 .btn1:active {
   box-shadow: 0 0px 2px #4361ee;
 }
