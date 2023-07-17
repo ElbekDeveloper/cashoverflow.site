@@ -52,8 +52,9 @@
   }
   
   .modal-content {
-    width: 450px;
+    width: 430px;
     height: 430px;
+    border-radius: 20px;
   }
   
   .modal-header {
@@ -63,6 +64,11 @@
   .modal-title {
     font-size: 18px;
     font-weight: bold;
+  }
+
+  .btn-close{
+    display: flex;
+    margin-left: -5px;
   }
 
   .salaries {

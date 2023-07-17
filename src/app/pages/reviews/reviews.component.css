@@ -85,8 +85,9 @@
 }
 
 .modal-content {
-  width: 450px;
+  width: 430px;
   height: 480px;
+  border-radius: 20px;
 }
 
 .modal-header {
@@ -97,7 +98,12 @@
   font-size: 18px;
   font-weight: bold;
 }
-/**/
+
+.btn-close{
+  display: flex;
+  margin-left: -5px;
+}
+
 .review {
   border-radius: 20px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
