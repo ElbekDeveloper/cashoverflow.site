@@ -4,25 +4,41 @@
       Reviews</button>
   </div>
 </div>
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title">Add new reviews</h1>
-      </div>
-      <div class="modal-body">
-        <div class="input-container">
-          <input type="text" placeholder="Title" id="title" formControlName="title" />
+          <div  class="review">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="form-img">
+              <img src="../../../assets/SignInHat.c0636635.svg" alt="" />
+            </div>
+            <h5>Leave Review</h5>
+            <form class="form">
+              <div class="input-container">
+              <input formControlName="start" required placeholder="stars"/>
+              </div>
+              <div class="input-container">
+                <input  formControlName="Company" required placeholder="Company"/>
+              </div>
+              <div class="thoughts-input">
+                <input  formControlName="Thoughts" required placeholder="Thoughts"/>
+              </div>
+              <button  class="btn1" type="submit">Send</button>
+            </form>
+          </div>
         </div>
-        <div class="input-container">
-          <input id="description" formControlName="description" placeholder="Description">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Save</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
       </div>
     </div>
-  </div>
-</div>
+
+
+<!-- <h5>Leave Review</h5>
+        <form class="form">
+          <div class="input-container">
+          <input formControlName="start" required placeholder="stars"/>
+          </div>
+          <div class="input-container">
+            <input  formControlName="Company" required placeholder="Company"/>
+          </div>
+          <div class="thoughts-input">
+            <input  formControlName="Thoughts" required placeholder="Thoughts"/>
+          </div> -->
