@@ -11,26 +11,46 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="review">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reset()"
+            #modalCloseButton></button>
           <div class="form-img">
             <img src="../../../assets/SignInHat.c0636635.svg" alt="" />
           </div>
           <h5>Leave Review</h5>
-          <div class="input-container">
-            <input type="number" [(ngModel)]="stars" required placeholder="stars" />
+          <div class="rating-box">
+            <p>Stars</p>
+            <div class="rating-container">
+              <input type="radio" id="star-4" name="stars" [(ngModel)]="stars" [value]="4"
+                (ngModelChange)="detectFormChanges()" />
+              <label for="star-4">★</label>
+              <input type="radio" id="star-3" name="stars" [(ngModel)]="stars" [value]="3"
+                (ngModelChange)="detectFormChanges()" />
+              <label for="star-3">★</label>
+              <input type="radio" id="star-2" name="stars" [(ngModel)]="stars" [value]="2"
+                (ngModelChange)="detectFormChanges()" />
+              <label for="star-2">★</label>
+              <input type="radio" id="star-1" name="stars" [(ngModel)]="stars" [value]="1"
+                (ngModelChange)="detectFormChanges()" />
+              <label for="star-1">★</label>
+              <input type="radio" id="star-0" name="stars" [(ngModel)]="stars" [value]="0"
+                (ngModelChange)="detectFormChanges()" />
+              <label for="star-0">★</label>
+            </div>
           </div>
           <div class="input-container">
-            <ng-select [items]="companies" bindlabel="name" bindvalue="id" [(ngModel)]="companyId"
-              placeholder="Select Company">
+            <ng-select [items]="companies" bindLabel="name" bindValue="id" [(ngModel)]="companyId"
+              placeholder="Select Company" (ngModelChange)="detectFormChanges()">
               <ng-template ng-option-tmp let-item="item">
                 {{ item.name }}
               </ng-template>
             </ng-select>
           </div>
           <div class="thoughts-input">
-            <textarea [(ngModel)]="thoughts" id="description" placeholder="Thoughts" required></textarea>
+            <textarea [(ngModel)]="thoughts" id="description" placeholder="Thoughts" required
+              (ngModelChange)="detectFormChanges()"></textarea>
           </div>
-          <button class="btn1" type="submit" (click)="createReview()">Send</button>
+          <button class="btn1" type="submit" (click)="createReview()" [disabled]="!formChanged"
+            [class.disabled-button]="!formChanged">Send</button>
         </div>
       </div>
     </div>

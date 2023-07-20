@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, ViewChild, ElementRef } from '@angular/core';;
 import { CompaniesService } from 'src/app/services/companies/companies.service';
 import { ReviewsService } from 'src/app/services/reviews/reviews.service';
-
 
 @Component({
   selector: 'app-reviews',
@@ -13,11 +11,14 @@ export class ReviewsComponent {
   companies: any[];
   reviews: any[];
   stars: number;
+  priority: number;
   thoughts: string;
-  companyId: any[];
+  companyId: string;
+  formChanged = false;
+  @ViewChild('modalCloseButton', { static: false }) modalCloseButtonRef!: ElementRef;
 
   constructor(private companiesService: CompaniesService,
-    private reviewsService: ReviewsService) {}
+    private reviewsService: ReviewsService) { }
 
   ngOnInit(): void {
     this.getCompany();
@@ -26,8 +27,8 @@ export class ReviewsComponent {
     this.reviewsService.getReview().subscribe((response: any) => {
       const reviews: any[] = response;
       this.stars = response.amount;
-      this.thoughts = response.experience;
-      this.companyId = response.locationId;
+      this.thoughts = response.thoughts;
+      this.companyId = response.companyId;
     });
   }
 
@@ -41,9 +42,8 @@ export class ReviewsComponent {
 
     this.reviewsService.createReview(review).subscribe(
       (response: any) => {
-        this.stars = null;
-        this.thoughts = null;
-        this.companyId = null;
+        this.reset();
+        this.modalCloseButtonRef.nativeElement.click();
       },
       (error: any) => {
         console.error('Error creating salary:', error);
@@ -82,5 +82,15 @@ export class ReviewsComponent {
         return v.toString(16);
       }
     );
+  }
+
+  reset() {
+    this.stars = null;
+    this.thoughts = null;
+    this.companyId = null;
+  }
+
+  detectFormChanges() {
+    this.formChanged = true;
   }
 }

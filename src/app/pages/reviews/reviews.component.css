@@ -239,6 +239,60 @@
   max-height: 100px !important;
 }
 
+.rating-box {
+  position: relative;
+  font-family: "Poppins";
+  gap: 10px;
+  display: flex;
+  height: 37px;
+  background-color: #fff !important;
+  border-radius: 15px !important;
+  border: 0.5px solid rgba(67, 97, 238, 0.35);
+  padding: 1px 10px 1px 10px;
+  color: #444444 !important;
+  margin-top: 2px;
+}
+
+.rating-box:hover {
+  border: 0.5px solid rgba(67, 97, 238, 1);
+}
+
+.rating-box p {
+  position: relative;
+  font-weight: 400;
+  color: #797878;
+  top: 4px;
+}
+
+.rating-box .rating-container {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 7px;
+}
+
+.rating-box .rating-container label {
+  color: #d4d4d4;
+  font-size: 25px;
+  margin-top: -9px;
+  transition: color 0.2s;
+}
+
+.rating-box .rating-container input {
+  display: none;
+}
+
+.rating-box .rating-container label:hover,
+.rating-box .rating-container label:hover~label,
+.rating-box .rating-container input:checked~label {
+  color: gold;
+  direction: ltr;
+}
+
+.disabled-button {
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .container img {
     width: 110%;
