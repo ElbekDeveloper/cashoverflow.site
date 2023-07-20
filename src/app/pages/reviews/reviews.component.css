@@ -145,7 +145,7 @@
   border-radius: 20px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
   padding: 2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
   z-index: 1;
   background: #fff;
   transition: all 0.2s ease-in-out;
@@ -237,6 +237,56 @@
   overflow-y: auto !important;
   height: auto !important;
   max-height: 100px !important;
+}
+
+.rating-box {
+  position: relative;
+  font-family: "Poppins";
+  gap: 10px;
+  display: flex;
+  height: 37px;
+  background-color: #fff !important;
+  border-radius: 20px !important;
+  border: 0.5px solid rgba(67, 97, 238, 0.35);
+  padding: 1px 10px 1px 10px;
+  color: #444444 !important;
+  margin-top: 2px;
+}
+
+.rating-box:hover {
+  border: 0.5px solid rgba(67, 97, 238, 1);
+}
+
+.rating-box p {
+  position: relative;
+  font-weight: 400;
+  color: #797878;
+  top: 4px;
+}
+
+.rating-box .rating-container {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 7px;
+}
+
+.rating-box .rating-container label {
+  color: #d4d4d4;
+  font-size: 25px;
+  margin-top: -9px;
+  transition: color 0.2s;
+}
+
+.rating-box .rating-container input {
+  display: none;
+}
+
+.rating-box .rating-container label:hover,
+.rating-box .rating-container label:hover~label,
+.rating-box .rating-container input:checked~label {
+  color: gold;
+  direction: ltr;
 }
 
 @media (max-width: 768px) {

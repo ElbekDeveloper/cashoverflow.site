@@ -16,9 +16,23 @@
             <img src="../../../assets/SignInHat.c0636635.svg" alt="" />
           </div>
           <h5>Leave Review</h5>
-          <div class="input-container">
-            <input type="number" [(ngModel)]="stars" required placeholder="stars" />
-          </div>
+          <div class="rating-box">
+            <p>Stars</p>
+            <div class="rating-container">
+                <input type="radio" id="star-5" name="priority" [(ngModel)]="priority" [value]="5" />
+                <label for="star-5">★</label>
+                <input type="radio" id="star-4" name="priority" [(ngModel)]="priority" [value]="4" />
+                <label for="star-4">★</label>
+                <input type="radio" id="star-3" name="priority" [(ngModel)]="priority" [value]="3" />
+                <label for="star-3">★</label>
+                <input type="radio" id="star-2" name="priority" [(ngModel)]="priority" [value]="2" />
+                <label for="star-2">★</label>
+                <input type="radio" id="star-1" name="priority" [(ngModel)]="priority" [value]="1" />
+                <label for="star-1">★</label>
+                <input type="radio" id="star-0" name="priority" [(ngModel)]="priority" [value]="0" />
+                <label for="star-0">★</label>
+            </div>
+        </div>
           <div class="input-container">
             <ng-select [items]="companies" bindlabel="name" bindvalue="id" [(ngModel)]="companyId"
               placeholder="Select Company">

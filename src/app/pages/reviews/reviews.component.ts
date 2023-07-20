@@ -13,6 +13,7 @@ export class ReviewsComponent {
   companies: any[];
   reviews: any[];
   stars: number;
+  priority: number;
   thoughts: string;
   companyId: any[];
 
