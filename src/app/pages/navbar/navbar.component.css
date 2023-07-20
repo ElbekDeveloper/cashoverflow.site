@@ -30,7 +30,7 @@
 }
 
 .navbarMenu a {
-  text-decoration: none !important;
+  text-decoration: none;
   color: #4361EE;
   padding: 10px;
   cursor: pointer;

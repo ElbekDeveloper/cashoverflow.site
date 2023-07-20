@@ -145,7 +145,7 @@
   border-radius: 20px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
   padding: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   z-index: 1;
   background: #fff;
   transition: all 0.2s ease-in-out;
@@ -287,6 +287,10 @@
 .rating-box .rating-container input:checked~label {
   color: gold;
   direction: ltr;
+}
+
+.disabled-button {
+  cursor: not-allowed;
 }
 
 @media (max-width: 768px) {

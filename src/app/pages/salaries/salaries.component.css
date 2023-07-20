@@ -186,6 +186,10 @@
   height: 90px !important;
 }
 
+.disabled-button {
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .container img {
     width: 110%;

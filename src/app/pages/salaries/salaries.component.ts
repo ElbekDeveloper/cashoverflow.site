@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { SalariesService } from 'src/app/services/salaries/salaries.service';
 import { LanguagesService } from 'src/app/services/languages/languages.service';
 import { LocationsService } from 'src/app/services/locations/locations.service';
@@ -18,21 +17,17 @@ export class SalariesComponent {
   locationId: string = '';
   languageId: string = '';
   jobId: string = '';
-  salaryForm: FormGroup;
   salaries: any[];
   languages: any[];
   locations: any[];
   jobs: any[];
+  formChanged = false;
+  @ViewChild('modalCloseButton', { static: false }) modalCloseButtonRef!: ElementRef;
 
   constructor(private salariesService: SalariesService,
     private languagesService: LanguagesService,
     private locationsService: LocationsService,
-    private jobsService: JobsService) {
-
-    this.salaryForm = new FormGroup({
-      createdDate: new FormControl(),
-    });
-  }
+    private jobsService: JobsService) { }
 
   ngOnInit(): void {
     this.getSalary();
@@ -64,11 +59,8 @@ export class SalariesComponent {
 
     this.salariesService.createSalary(salary).subscribe(
       (response: any) => {
-        this.amount = null;
-        this.experience = null;
-        this.locationId = null;
-        this.languageId = null;
-        this.jobId = null;
+        this.reset();
+        this.modalCloseButtonRef.nativeElement.click();
       },
       (error: any) => {
         console.error('Error creating salary:', error);
@@ -129,5 +121,17 @@ export class SalariesComponent {
         return v.toString(16);
       }
     );
+  }
+
+  reset() {
+    this.amount = null;
+    this.experience = null;
+    this.locationId = null;
+    this.languageId = null;
+    this.jobId = null;
+  }
+
+  detectFormChanges() {
+    this.formChanged = true;
   }
 }
