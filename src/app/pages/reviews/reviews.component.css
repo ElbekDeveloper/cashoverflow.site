@@ -1,6 +1,28 @@
+.body {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  position: relative;
+  top: 60px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.container img {
+  position: relative;
+  transform: translate(31%, 24%);
+  width: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .header {
   width: 100px;
-  left: 140vh;
+  left: 160vh;
   top: 27px;
   position: relative;
   font-family: "Poppins", "sans-serif";
@@ -10,11 +32,11 @@
   color: white;
   background-color: #4361ee;
   border-radius: 20px;
-  font-size: 15.5px;
+  font-size: 15px;
   height: 30px;
-  width: 120px;
+  width: 110px;
   border: none;
-  left: 190px;
+  left: 230px;
   bottom: 4px;
   position: relative;
 }
@@ -30,16 +52,35 @@
   margin-top: 2px;
 }
 
-.input-container input[type="text"],
-.input-container input[type="number"]  {
+.input-container input[type="text"] {
   padding: 10px;
   border: 0.5px solid rgba(67, 97, 238, 0.35);
   border-radius: 20px;
   width: 100%;
   box-sizing: border-box;
   outline: rgba(67, 97, 238, 1);
-  font-size: 14px;
+  font-size: 15px;
+  color: #7e7b7b;
   height: 37px;
+  font-family: "Poppins", "sans-serif";
+}
+
+.input-container input[type="number"] {
+  padding: 10px;
+  border: 0.5px solid rgba(67, 97, 238, 0.35);
+  border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: rgba(67, 97, 238, 1);
+  font-size: 18px;
+  color: #444 !important;
+  height: 37px;
+  font-family: "Poppins", "sans-serif";
+}
+
+.input-container input[type="number"]::placeholder {
+  color: #7e7b7b;
+  font-size: 17px;
   font-family: "Poppins", "sans-serif";
 }
 
@@ -48,23 +89,29 @@
   margin-top: 2px;
 }
 
-.thoughts-input textarea{
+.thoughts-input textarea {
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 15px;
   height: 100px;
   max-height: 100px;
   resize: none;
   outline: rgba(67, 97, 238, 1);
   border: 0.5px solid rgba(67, 97, 238, 0.35);
   border-radius: 20px;
-  color: rgba(85, 85, 85, 1);
+  color: #7e7b7b;
   font-family: "Poppins", "sans-serif";
 }
 
 .thoughts-input textarea:hover {
   border: 0.5px solid rgba(67, 97, 238, 1);
+}
+
+.thoughts-input textarea::placeholder {
+  color: #AAAAAA;
+  font-size: 16px;
+  font-family: "Poppins", "sans-serif";
 }
 
 .modal-dialog {
@@ -88,12 +135,11 @@
   font-weight: bold;
 }
 
-.btn-close{
+.btn-close {
   display: flex;
   position: relative;
   left: 350px;
 }
-
 
 .review {
   border-radius: 20px;
@@ -104,6 +150,7 @@
   background: #fff;
   transition: all 0.2s ease-in-out;
 }
+
 .form-img {
   display: flex;
   justify-content: center;
@@ -114,6 +161,7 @@
   height: 150px;
   margin-bottom: 0.2rem;
 }
+
 .review h5 {
   color: #444;
   text-align: center;
@@ -121,30 +169,14 @@
   margin: 0.9rem 0 0.6rem;
   font-weight: 600;
 }
+
 .form {
   display: flex;
   flex-direction: column;
 }
+
 .form div {
   position: relative;
-}
-
-.input-container select {
-  width: 100%;
-  height: 34px;
-  margin: 0.6rem 0.6rem 0.6rem 0;
-  padding: 0px 0.3rem;
-  border: 0.5px solid rgba(67, 97, 238, 0.35);
-  border-radius: 50px;
-  outline: rgba(67, 97, 238, 1);
-  color: rgba(85, 85, 85, 1);
-  font-family: "Poppins", "sans-serif";
-  transition: all 0.4s ease;
-  font-size: 13px;
-}
-
-.input-container select:hover {
-  border: 0.5px solid rgba(67, 97, 238, 1);
 }
 
 .input-container input:hover {
@@ -153,17 +185,17 @@
 
 .btn1 {
   width: 100%;
+  top: 10px;
   background: #4361ee;
-  margin: 0.7rem 0.7rem 0.7rem 0;
   padding: 0.4rem 1.2rem;
-  border: none;
   border-radius: 50px;
   outline: none;
   color: #fff;
   cursor: pointer;
   font-family: "Poppins", "sans-serif";
   border: 1px solid rgba(67, 97, 238, 1);
-  font-size: 13px;
+  font-size: 14px;
+  position: relative;
 }
 
 .btn1:hover {
@@ -176,16 +208,69 @@
   box-shadow: 0 0px 2px #4361ee;
 }
 
-@media screen and (max-width: 768px) {
-  #modal-wrapper {
-    flex-direction: column;
+::ng-deep .ng-select.ng-select-single .ng-select-container {
+  height: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0.5px solid rgba(67, 97, 238, 0.35);
+  color: #7e7b7b;
+  font-family: "Poppins", "sans-serif";
+}
+
+::ng-deep .ng-select.ng-select-single .ng-select-container:hover {
+  border: 0.5px solid rgba(67, 97, 238, 1);
+}
+
+::ng-deep.ng-select .ng-select-container .ng-value-container .ng-input>input {
+  color: #444;
+  font-size: 15px;
+  font-family: "Poppins", "sans-serif";
+}
+
+::ng-deep .ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+  border-color: none;
+  box-shadow: none;
+}
+
+::ng-deep .ng-dropdown-panel.ng-select-bottom {
+  overflow-y: auto !important;
+  height: auto !important;
+  max-height: 100px !important;
+}
+
+@media (max-width: 768px) {
+  .container img {
+    width: 110%;
+    top: 49%;
+    right: 40%;
   }
-  .form-img img {
-    width: 200px;
-    height: 100px;
+
+  .header {
+    left: 1px;
+    top: 20px;
   }
-  .salaries {
-    padding: 2rem;
-    margin: 1rem;
+
+  .add-reviews {
+    color: white;
+    background-color: #4361ee;
+    border-radius: 20px;
+    font-size: 9px;
+    height: 30px;
+    width: 65px;
+    height: 22px;
+    top: 1px;
+    border: none;
+    left: 307px;
+  }
+
+  .modal-content {
+    width: 370px;
+    height: 250px;
+  }
+
+  .btn-close {
+    left: 295px;
+    bottom: 18px;
   }
 }

@@ -1,43 +1,52 @@
-<div class="container">
-  <div class="header">
-    <button type="button" class="add-salaries" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Add
-      Salaries</button>
-  </div>
+<div class="header">
+  <button type="button" class="add-salaries" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Add
+    Salaries</button>
 </div>
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="salaries">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="form-img">
-          <img src="../../../assets/SignInHat.c0636635.svg" alt="" />
+<div class="body">
+  <div class="container">
+    <img src="../../../assets/SignInBG.4484b7e6.svg" alt="" />
+  </div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="salaries">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="form-img">
+            <img src="../../../assets/SignInHat.c0636635.svg" alt="" />
+          </div>
+          <h5>Add your Salary</h5>
+          <div class="input-container">
+            <input type="number" required placeholder="Amount" [(ngModel)]="amount" />
+          </div>
+          <div class="input-container">
+            <input type="number" required placeholder="Experience year" [(ngModel)]="experience" />
+          </div>
+          <div class="input-container">
+            <ng-select [items]="locations" bindLabel="name" bindValue="id" [(ngModel)]="locationId"
+              placeholder="Select Location">
+              <ng-template ng-option-tmp let-item="item">
+                {{ item.name }}
+              </ng-template>
+            </ng-select>
+          </div>
+          <div class="input-container">
+            <ng-select [items]="languages" bindLabel="name" bindValue="id" [(ngModel)]="languageId"
+              placeholder="Select Language">
+              <ng-template ng-option-tmp let-item="item">
+                {{ item.name }}
+              </ng-template>
+            </ng-select>
+          </div>
+          <div class="input-container">
+            <ng-select [items]="jobs" bindLabel="title" bindValue="id" [(ngModel)]="jobId" placeholder="Select Job">
+              <ng-template ng-option-tmp let-item="item">
+                {{ item.title }}
+              </ng-template>
+            </ng-select>
+          </div>
+          <button class="btn1" type="submit" (click)="createSalary()">Send</button>
         </div>
-        <h5>Add your Salary</h5>
-        <div class="input-container">
-          <input type="number" required placeholder="Amount" [(ngModel)]="amount" />
-        </div>
-        <div class="input-container">
-          <input type="number" required placeholder="Experience year" [(ngModel)]="experience" />
-        </div>
-        <div class="input-container">
-          <select [(ngModel)]="locationId" required>
-            <option value="" disabled selected >Select Location</option>
-            <option *ngFor="let location of locations" [value]="location.id">{{ location.name }}</option>
-          </select>
-        </div>
-        <div class="input-container">
-          <select [(ngModel)]="languageId" required>
-            <option value="" disabled selected >Select Language</option>
-            <option *ngFor="let language of languages" [value]="language.id">{{ language.name }}</option>
-          </select>
-        </div>
-        <div class="input-container">
-          <select [(ngModel)]="jobId" required>
-            <option *ngFor="let job of jobs" [value]="job.id">{{ job.title }}</option>
-          </select>
-        </div>        
-        <button class="btn1" type="submit" (click)="createSalary()">Send</button>
       </div>
     </div>
   </div>

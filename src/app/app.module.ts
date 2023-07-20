@@ -12,6 +12,7 @@ import { SalariesComponent } from './pages/salaries/salaries.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgSelectModule
   ],
  providers: [
     {

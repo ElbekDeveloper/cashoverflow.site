@@ -1,32 +1,38 @@
-<div class="container">
-  <div class="header">
-    <button type="button" class="add-reviews" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Add
-      Reviews</button>
-  </div>
+<div class="header">
+  <button type="button" class="add-reviews" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Add Reviews</button>
 </div>
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-          <div  class="review">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            <div class="form-img">
-              <img src="../../../assets/SignInHat.c0636635.svg" alt="" />
-            </div>
-            <h5>Leave Review</h5>
-              <div class="input-container">
-              <input type="number" [(ngModel)]="stars"  required placeholder="stars"/>
-              </div>
-              <div class="input-container">
-                <select  required [(ngModel)]="companyId" >
-                  <option value="" disabled selected >Select Location</option>
-                  <option *ngFor="let company of companies" [value]="company.id">{{ company.name }}</option>
-                </select>
-              </div>
-              <div class="thoughts-input">
-                <textarea [(ngModel)]="thoughts" id="description" placeholder="Thoughts" required></textarea>
-              </div>
-              <button  class="btn1" type="submit" (click)="createReview()">Send</button>
+<div class="body">
+  <div class="container">
+    <img src="../../../assets/SignInBG.4484b7e6.svg" alt="" />
+  </div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="review">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="form-img">
+            <img src="../../../assets/SignInHat.c0636635.svg" alt="" />
           </div>
+          <h5>Leave Review</h5>
+          <div class="input-container">
+            <input type="number" [(ngModel)]="stars" required placeholder="stars" />
+          </div>
+          <div class="input-container">
+            <ng-select [items]="companies" bindlabel="name" bindvalue="id" [(ngModel)]="companyId"
+              placeholder="Select Company">
+              <ng-template ng-option-tmp let-item="item">
+                {{ item.name }}
+              </ng-template>
+            </ng-select>
+          </div>
+          <div class="thoughts-input">
+            <textarea [(ngModel)]="thoughts" id="description" placeholder="Thoughts" required></textarea>
+          </div>
+          <button class="btn1" type="submit" (click)="createReview()">Send</button>
         </div>
       </div>
     </div>
+  </div>
+</div>

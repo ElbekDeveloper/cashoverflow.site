@@ -40,20 +40,31 @@
   color: blue;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  position: static;
-  overflow-y: hidden;
+.navbarMenu a.active-link {
+  text-decoration: underline;
 }
 
-.container img {
-  position: absolute;
-  left: 260px;
-  right: 0;
-  bottom: 0;
-  width: 62%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+  }
+
+  .navbarText {
+    font-size: 23px;
+    margin-bottom: 10px;
+    left: 10px;
+  }
+
+  .navbarMenu {
+    display: flex;
+    font-size: 15px;
+    width: 100%;
+    left: 41%;
+    top: 20px;
+    font-weight: 500;
+  }
+
+  .navbarMenu a {
+    padding: 5px 10px;
+  }
 }
