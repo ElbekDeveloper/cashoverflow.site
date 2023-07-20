@@ -257,21 +257,21 @@
   border: 0.5px solid rgba(67, 97, 238, 1);
 }
 
-.rating-box p {
+.rating-box p{
   position: relative;
   font-weight: 400;
   color: #797878;
   top: 4px;
 }
 
-.rating-box .rating-container {
+.rating-box .rating-container{
   display: flex;
   flex-direction: row-reverse;
   position: relative;
   top: 7px;
 }
 
-.rating-box .rating-container label {
+.rating-box .rating-container label{
   color: #d4d4d4;
   font-size: 25px;
   margin-top: -9px;
