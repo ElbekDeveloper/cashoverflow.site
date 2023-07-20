@@ -22,7 +22,7 @@
 
 .header {
   width: 100px;
-  left: 140vh;
+  left: 160vh;
   top: 27px;
   position: relative;
   font-family: "Poppins", "sans-serif";
@@ -32,11 +32,11 @@
   color: white;
   background-color: #4361ee;
   border-radius: 20px;
-  font-size: 15.5px;
+  font-size: 15px;
   height: 30px;
-  width: 120px;
+  width: 110px;
   border: none;
-  left: 190px;
+  left: 230px;
   bottom: 4px;
   position: relative;
 }
